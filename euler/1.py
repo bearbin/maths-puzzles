@@ -17,4 +17,12 @@
 #DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 #OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-# This is puzzle #0 from projecteuler.net
+# This is puzzle #1 from projecteuler.net
+
+sum = 0
+
+for i in range(1000):
+    if i % 3 is 0 or i % 5 is 0:
+        sum += i
+
+print(sum)
