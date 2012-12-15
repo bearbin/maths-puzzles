@@ -16,14 +16,14 @@
 #OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 def getFizzBuzz(number):
-	if number % 3 is 0 and number % 5 is 0:
-		print("FizzBuzz")
-	elif number % 3 is 0:
-		print("Fizz")
-	elif number % 5 is 0:
-		print("Buzz")
-	else:
-		print(number)
+    if number % 3 is 0 and number % 5 is 0:
+        print("FizzBuzz")
+    elif number % 3 is 0:
+        print("Fizz")
+    elif number % 5 is 0:
+        print("Buzz")
+    else:
+        print(number)
 
 for i in range(1,101):
-	getFizzBuzz(i)
+    getFizzBuzz(i)
