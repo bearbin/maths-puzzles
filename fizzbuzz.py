@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # Copyright © 2012 Alexander Harkness
 #
 #Permission is hereby granted, free of charge, to any person obtaining a copy of this software
@@ -15,6 +17,17 @@
 #DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 #OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+# This program generates a FizzBuzz sequence (by default 1 - 100, but configurable)
+
+import argparse
+
+argumentParser = argparse.ArgumentParser(description="Generate a FizzBuzz sequence.")
+argumentParser.add_argument("-s", "--start", type=int, default=1,
+                help="Specify the start number for the sequence.")
+argumentParser.add_argument("-f", "--finish", type=int, default=100,
+                help="Specify the finish number for the sequence.")
+arguments = argumentParser.parse_args()
+
 def getFizzBuzz(number):
     if number % 3 is 0 and number % 5 is 0:
         print("FizzBuzz")
@@ -25,5 +38,5 @@ def getFizzBuzz(number):
     else:
         print(number)
 
-for i in range(1,101):
+for i in range(arguments.start,arguments.finish+1):
     getFizzBuzz(i)
