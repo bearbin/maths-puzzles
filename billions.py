@@ -24,7 +24,7 @@
 #numbers = [x for x in range(1234567890, 9876543210, 10) if int(str(x)[:1]) % 1 == 0 and int(str(x)[:2]) % 2 == 0 and int(str(x)[:3]) % 3 == 0 and int(str(x)[2:4]) % 4 == 0 and int(str(x)[4]) == 5 and int(str(x)[:6]) % 6 == 0 and int(str(x)[:7]) % 7 == 0 and int(str(x)[:8]) % 8 == 0 and int(str(x)[:9]) % 9 == 0]
 
 # This code is much faster, it takes about 3 mins on my machine.
-numbers = [x for x in range(1234567890, 9876543210, 10) if (x // 100000000) % 2 == 0 and (x // 10000000) % 3 == 0 and (x // 1000000) % 4 == 0 and (x // 100000) % 5 == 0 and (x // 10000) % 6 == 0 and (x // 1000) % 7 == 0 and (x // 100) % 8 == 0 and (x / 10) % 9 == 0] 
+numbers = [x for x in range(1234567890, 9876543210, 10) if (x // 100000000) & 1 == 0 and (x // 10000000) % 3 == 0 and (x // 1000000) % 4 == 0 and (x // 100000) % 5 == 0 and (x // 10000) % 6 == 0 and (x // 1000) % 7 == 0 and (x // 100) % 8 == 0 and (x / 10) % 9 == 0] 
 
 # This checks through the numbers to see if they contain all the numbers from zero till 9.
 print([p for p in numbers if '0' in str(p) and '1' in str(p) and '2' in str(p) and '3' in str(p) and '4' in str(p) and '5' in str(p) and '6' in str(p) and '7' in str(p) and '8' in str(p) and '9' in str(p)])
