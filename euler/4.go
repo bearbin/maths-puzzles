@@ -19,8 +19,7 @@ func isPalin(in int) bool {
 	original := in
 	rev := 0
 	for in > 0 {
-		lastdigit := in % 10
-		rev = (rev * 10) + lastdigit
+		rev = (rev * 10) + (in % 10)
 		in /= 10
 	}
 	return original == rev
