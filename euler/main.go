@@ -19,6 +19,8 @@ func main() {
 		fmt.Println(c4())
 	case "5":
 		fmt.Println(c5())
+	case "6":
+		fmt.Println(c6())
 	default:
 		fmt.Println("Please enter a valid challenge number.")
 		os.Exit(-1)
