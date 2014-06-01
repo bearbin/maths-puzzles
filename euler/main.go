@@ -8,14 +8,16 @@ import (
 
 func main() {
 	flag.Parse()
-	challenge := flag.Arg(0)
-	if "1" == challenge {
+	switch flag.Arg(0) {
+	case "1":
 		fmt.Println(c1())
-	} else if "2" == challenge {
+	case "2":
 		fmt.Println(c2())
-	} else if "3" == challenge {
+	case "3":
 		fmt.Println(c3())
-	} else {
+	case "4":
+		fmt.Println(c4())
+	default:
 		fmt.Println("Please enter a valid challenge number.")
 		os.Exit(-1)
 	}
